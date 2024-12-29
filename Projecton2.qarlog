@@ -1,0 +1,33 @@
+Quartus Prime Archive log --	C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Projecton2.qarlog
+
+Archive:	C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Projecton2.qar
+Date:		Sat Dec 28 23:44:47 2024
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Projecton2.qpf
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Projecton2.qsf
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/RAM.cmp
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/RAM.qip
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/RAM.vhd
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/RAM_inst.vhd
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/ROM.cmp
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/ROM.qip
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/ROM.vhd
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/ROM_init/lena_noise_b.mif
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/ROM_init/lena_noise_g.mif
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/ROM_init/lena_noise_r.mif
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/ROM_init/petruha_noise_b.mif
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/ROM_init/petruha_noise_g.mif
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/ROM_init/petruha_noise_r.mif
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/VHDL/Control_Unit.vhd
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/VHDL/Processing_Unit.vhd
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/VHDL/helper_package.vhd
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/output_files/Projecton2.jdi
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/output_files/Projecton2.sld
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/output_files/Projecton2.sof
+g:/quartus/quartus/bin64/assignment_defaults.qdf
+	======= Total: 22 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

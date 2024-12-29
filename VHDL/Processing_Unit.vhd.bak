@@ -1,0 +1,209 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+use work.helper_package.all;
+entity processing_unit is
+	Port(
+			clk				:	in		std_logic;
+			rst				:	in 	std_logic;
+			start_pulse_p	:	in		std_logic;
+			end_pulse_p		:	out	std_logic;
+			
+			data_in			:	in		int_arr128;
+			data_out			:	out	int_arr128;
+			
+			--read_start_p	:	out	std_logic;
+			--read_end_p		:	in		std_logic;
+			write_start_p	:	out	std_logic;
+			--write_end_p		:	in		std_logic;
+			
+			write_add		:	out	std_logic_vector(8 downto 0);
+			read_add			:	out	std_logic_vector(8 downto 0)
+);
+end processing_unit;
+architecture processing_unit_ARCH of processing_unit is
+
+	signal processing_sm				:	std_logic_vector(7 downto 0) :=x"00";
+	signal left_top_row				:	int_arr130;
+	signal left_middle_row			:	int_arr130;
+	signal left_buttom_row			:	int_arr130;
+	signal right_top_row				:	int_arr130;
+	signal right_middle_row			:	int_arr130;
+	signal right_buttom_row			:	int_arr130;
+	signal next_row					:	int_arr128;
+	signal write_start_p_buff		:	std_logic;
+	signal write_add_buff			:	std_logic_vector(8 downto 0);
+	signal read_add_buff				:	std_logic_vector(8 downto 0);
+	signal read_dly_counter			:	std_logic_vector(1 downto 0);
+	constant zero_int					:	integer	:= 0;
+begin
+	
+	read_add<=read_add_buff;
+	
+	write_add<=write_add_buff;
+	
+	write_start_p<=write_start_p_buff;
+	
+	process(clk, rst)
+	begin
+		if(rst = '1') then
+			end_pulse_p<='0';
+			data_out<=(others=>zero_int);
+			left_top_row<=(others=>zero_int);
+			left_middle_row<=(others=>zero_int);
+			left_buttom_row<=(others=>zero_int);
+			right_top_row<=(others=>zero_int);
+			right_middle_row<=(others=>zero_int);
+			right_buttom_row<=(others=>zero_int);
+			--out_row<=(others=>zero_int);
+			write_add_buff<=(others=>'0');
+			read_add_buff<=(others=>'0');
+			processing_sm<=x"00";
+			--read_start_p<='0';
+			read_dly_counter<=(others=>'0');
+			
+			write_start_p_buff<='0';	
+		else
+			if(rising_edge(clk)) then
+				case processing_sm is
+					
+					when	x"00" =>
+						if(start_pulse_p = '1') then
+							processing_sm<=x"01";
+							--read_start_p<='1';
+							read_dly_counter<=read_dly_counter+'1';
+						else
+							processing_sm<=x"00";
+							end_pulse_p<='0';
+							data_out<=(others=>zero_int);
+							left_top_row<=(others=>zero_int);
+							left_middle_row<=(others=>zero_int);
+							left_buttom_row<=(others=>zero_int);
+							right_top_row<=(others=>zero_int);
+							right_middle_row<=(others=>zero_int);
+							right_buttom_row<=(others=>zero_int);
+							
+							write_add_buff<=(others=>'0');
+							read_add_buff<=(others=>'0');
+							read_dly_counter<=(others=>'0');
+							--read_start_p<='0';
+							write_start_p_buff<='0';							
+						end if;
+						
+					when	x"01" =>--first row left half is special case
+						if(read_dly_counter = 2) then
+							read_dly_counter<="01";
+							read_add_buff<=read_add_buff+'1';
+							left_top_row(0) <= data_in(0);
+							left_middle_row(0) <= data_in(0);
+							for i in 0 to 127 loop
+								left_top_row(i + 1) <= data_in(i);
+								left_middle_row(i + 1) <= data_in(i);
+							end loop;
+							processing_sm<=x"02";
+						else
+							read_dly_counter<=read_dly_counter+'1';
+						end if;
+						
+					when	x"02" =>--reading right half of first row
+						if(read_dly_counter = 2) then
+							read_dly_counter<="01";
+							read_add_buff<=read_add_buff+'1';
+							right_top_row(0) <= left_top_row(128);
+							right_middle_row(0) <= left_middle_row(128);
+							for i in 0 to 127 loop
+								right_top_row(i + 1) <= data_in(i);
+								right_middle_row(i + 1) <= data_in(i);
+							end loop;
+							right_top_row(129) <= data_in(127);
+							right_middle_row(129) <= data_in(127);
+							left_top_row(129)<=data_in(0);
+							left_middle_row(129)<=data_in(0);
+							processing_sm<=x"04";
+						else
+							read_dly_counter<=read_dly_counter+'1';
+						end if;
+						
+					when	x"03" =>
+						if(write_start_p_buff = '0') then
+							read_dly_counter<="01";
+							read_add_buff<=read_add_buff+'1';
+							write_add_buff<=write_add_buff+'1';
+							
+							right_top_row<=right_middle_row;
+							left_top_row<=left_middle_row;
+							right_middle_row<=right_buttom_row;
+							left_middle_row<=left_buttom_row;
+							
+							processing_sm<=x"04";
+						else
+							write_start_p_buff<='0';
+						end if;
+
+					when	x"04" =>
+						if(read_dly_counter = 2) then
+							read_dly_counter<= "01";
+							read_add_buff<=read_add_buff+'1';
+							left_buttom_row(0)<=data_in(0);
+							for i in 0 to 127 loop
+								left_buttom_row(i + 1) <= data_in(i);
+							end loop;
+							processing_sm<=x"05";
+						else
+							read_dly_counter<= read_dly_counter +'1';
+						end if;
+						
+					when	x"05" =>
+						if(read_dly_counter = 2) then
+							read_dly_counter<="00";
+							read_add_buff<=read_add_buff+'1';
+							right_buttom_row(0) <= left_buttom_row(128);
+							right_buttom_row(129) <= data_in(127);
+							left_buttom_row(129)<= data_in(0);
+							for i in 0 to 127 loop
+								right_buttom_row(i + 1) <= data_in(i);
+							end loop;
+							processing_sm<=x"06";
+						else
+							read_dly_counter<=read_dly_counter+1;
+						end if;
+					when x"06" =>
+						write_start_p_buff<='1';
+						for i in 1 to 128 loop
+							data_out(i-1) <= pixelManipulator(left_top_row(i-1) & left_top_row(i) & left_top_row(i+1) & left_middle_row(i-1) & left_middle_row(i) & left_middle_row(i+1) & left_buttom_row(i-1) & left_buttom_row(i) & left_buttom_row(i+1));
+						end loop;
+						processing_sm<=x"07";
+						
+					when x"07" =>
+						if(write_start_p_buff = '0') then
+							write_start_p_buff<='1';
+							write_add_buff<=write_add_buff+'1';
+							
+							for i in 1 to 128 loop
+								data_out(i-1) <= pixelManipulator(right_top_row(i-1) & right_top_row(i) & right_top_row(i+1) & right_middle_row(i-1) & right_middle_row(i) & right_middle_row(i+1) & right_buttom_row(i-1) & right_buttom_row(i) & right_buttom_row(i+1));
+							end loop;
+							
+							if(read_add_buff /= 0) then
+								read_add_buff<="111111101";
+							end if;
+							
+							if(write_add_buff /=511) then
+								processing_sm<=x"03";
+							else
+								processing_sm<=x"08";
+							end if;
+						else
+							write_start_p_buff<='0';
+						end if;
+					when x"08" =>
+						end_pulse_p<= '1';
+						
+					when OTHERS =>
+						processing_sm<=x"00";
+				end case;
+			end if;
+		end if;
+	end process;
+end architecture processing_unit_ARCH;

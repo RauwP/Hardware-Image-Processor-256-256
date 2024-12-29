@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Dec 28 23:32:47 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : Projecton2
+Top-level Entity Name : control_unit
+Family : Cyclone IV E
+Total logic elements : 109,980
+    Total combinational functions : 103,788
+    Dedicated logic registers : 24,858
+Total registers : 24858
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 3,145,728
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

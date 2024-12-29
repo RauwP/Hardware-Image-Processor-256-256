@@ -1,0 +1,87 @@
+-- File: helper_package.vhd
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
+
+package helper_package is
+    -- Declarations (types, constants, functions, etc.)
+	type int_arr130 is array (0 to 129) of integer range 0 to 255;
+	type int_arr128 is array (0 to 127) of integer range 0 to 255;
+	type int_arr8 is array (0 to 7) of integer range 0 to 255;
+	type int_arr9 is array (0 to 8) of integer range 0 to 255;
+	
+	subtype slv1024 is std_logic_vector(1023 downto 0);
+--functions
+Function sort_int_arr8(input_arr	:	int_arr8) return int_arr8;
+
+Function pixelManipulator(input_arr : int_arr9) return integer;
+
+Function intarr128toSTDLV(input_arr	:	int_arr128) return slv1024;
+
+Function STDLVtointarr128(input_arr	:	slv1024) return int_arr128;
+
+end helper_package;
+
+package body helper_package is
+
+function sort_int_arr8(input_arr : int_arr8) return int_arr8 is
+        variable arr : int_arr8 := input_arr;
+        variable temp : integer range 0 to 255;
+    begin
+        -- Bubble sort for 8 elements:
+        -- 7 passes are needed at most.
+        for i in 0 to 6 loop
+            for j in 0 to 6 - i loop
+                if arr(j) > arr(j+1) then
+                    -- Swap arr(j) and arr(j+1)
+                    temp := arr(j);
+                    arr(j) := arr(j+1);
+                    arr(j+1) := temp;
+                end if;
+            end loop;
+        end loop;
+
+        return arr;
+    end function sort_int_arr8;
+
+function pixelManipulator(input_arr : int_arr9) return integer is
+	variable unsorted_arr : int_arr8;
+	variable sorted_arr : int_arr8;
+	variable median: integer;
+begin
+   unsorted_arr(0) := input_arr(0);
+	unsorted_arr(1) := input_arr(1);
+	unsorted_arr(2) := input_arr(2);
+	unsorted_arr(3) := input_arr(3);
+	unsorted_arr(4) := input_arr(5);
+	unsorted_arr(5) := input_arr(6);
+	unsorted_arr(6) := input_arr(7);
+	unsorted_arr(7) := input_arr(8);
+	sorted_arr:=sort_int_arr8(unsorted_arr);
+	return (sorted_arr(3)+sorted_arr(4))/2;
+end function pixelManipulator;
+
+function intarr128toSTDLV(input_arr : int_arr128) return slv1024 is
+        variable result : slv1024 := (others => '0');
+        variable temp   : unsigned(7 downto 0);
+    begin
+        for i in 0 to 127 loop
+            temp := to_unsigned(input_arr(i), 8);
+            -- Place temp into the correct segment of the result
+            result((i+1)*8-1 downto i*8) := std_logic_vector(temp);
+        end loop;
+        return result;
+    end function intarr128toSTDLV;
+
+
+function STDLVtointarr128(input_arr : slv1024) return int_arr128 is
+		variable result : int_arr128 := (others => 0);
+		variable temp   : unsigned(7 downto 0);
+   begin
+		for i in 0 to 127 loop
+			temp := unsigned(input_arr((i+1)*8-1 downto i*8));
+			result(i) := to_integer(temp);
+      end loop;
+      return result;
+    end function STDLVtointarr128;
+end helper_package;
