@@ -10,7 +10,7 @@ Finally I've attached some python scripts to do some converting:
 *noise adder for adding to a 256 by 256 Gaussian noise.  
   
 Technical Info:  
-This project is designed for cyclone iv E EP4CE115F29C7.  
+This project is designed for cyclone IV E EP4CE115F29C7.  
 For the actual processing of the noise I used a 3*3 median of the medians of the columns.  
 The main limitation of this project was the amount of combinatorical logic units, to get around this I sacrificed accuracy for both speed and hardware efficiency, and used median of medians instead of better alternatives.   
 Usage Examples:  
