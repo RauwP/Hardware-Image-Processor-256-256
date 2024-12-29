@@ -7,7 +7,7 @@ Finally I've attached some python scripts to do some converting:
 *from mem to mif.  
 *from 3 mif files to raw.  
 *from raw to 3 mif files.  
-*noise adder for adding to a 256 by 256 Gaussian noise.  
+*noise adder for adding to a 256 by 256 image Gaussian noise.  
   
 Technical Info:  
 This project is designed for cyclone IV E EP4CE115F29C7.  
