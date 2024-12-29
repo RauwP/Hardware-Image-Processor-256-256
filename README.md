@@ -12,7 +12,7 @@ Finally I've attached some python scripts to do some converting:
 Technical Info:  
 This project is designed for cyclone IV E EP4CE115F29C7.  
 For the actual processing of the noise I used a 3*3 median of the medians of the columns.  
-The main limitation of this project was the amount of combinatorical logic units, to get around this I sacrificed accuracy for both speed and hardware efficiency, and used median of medians instead of better alternatives. 
+The main limitation of this project was the amount of combinatorical logic units, to get around this I sacrificed accuracy for both speed and hardware efficiency, and used median of medians instead of better alternatives.   
 To change the image for processing ypu need to create and include the mif files in the project and change the mif_path attribute of the ROM to fit the desired path.  
 Usage Examples:  
 ![petruha before and after](https://github.com/user-attachments/assets/6f20ae0a-3a63-4fe0-8196-4db9750a91e0)  
