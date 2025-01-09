@@ -1,12 +1,16 @@
 Quartus Prime Archive log --	C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Projecton2.qarlog
 
 Archive:	C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Projecton2.qar
-Date:		Sat Dec 28 23:44:47 2024
+Date:		Thu Jan 02 13:21:26 2025
 Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
 C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Projecton2.qpf
 C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Projecton2.qsf
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Python Scripts/hextomif.py
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Python Scripts/mif_to_raw.py
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Python Scripts/noiseadder.py
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/Python Scripts/raw_to_mif.py
 C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/RAM.cmp
 C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/RAM.qip
 C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/RAM.vhd
@@ -23,11 +27,27 @@ C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/RO
 C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/VHDL/Control_Unit.vhd
 C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/VHDL/Processing_Unit.vhd
 C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/VHDL/helper_package.vhd
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/db/Projecton2.db_info
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.db_info
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.cmp.cdb
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.cmp.dfp
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.cmp.hdb
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.cmp.logdb
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.cmp.rcfdb
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.map.cdb
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.map.dpi
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.map.hbdb.cdb
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.map.hbdb.hb_info
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.map.hbdb.hdb
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.map.hbdb.sig
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.map.hdb
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.root_partition.map.kpt
+C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/incremental_db/compiled_partitions/Projecton2.rrp.hdb
 C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/output_files/Projecton2.jdi
 C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/output_files/Projecton2.sld
 C:/Users/Gadi-PC/Documents/Study/4th_year/Advanced_Hardware_Design/Projecton2/output_files/Projecton2.sof
 g:/quartus/quartus/bin64/assignment_defaults.qdf
-	======= Total: 22 files to archive =======
+	======= Total: 42 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.

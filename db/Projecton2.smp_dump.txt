@@ -1,5 +1,5 @@
 
-State Machine - |control_unit|processing_unit:u_processing_unitB|processing_sm
+State Machine - |control_unit|color_control_unit:u_color_control_unit_b|processing_unit:u_processing_unit|processing_sm
 Name processing_sm.END_SM processing_sm.LOOP_WRITE_ADD_ADVANCE2 processing_sm.LOOP_WRITE_RIGHT processing_sm.LOOP_WRITE_ADD_ADVANCE1 processing_sm.LOOP_WRITE_LEFT processing_sm.LOOP_READ_RIGHT processing_sm.LOOP_WAIT_READ_RIGHT2 processing_sm.LOOP_WAIT_READ_RIGHT1 processing_sm.LOOP_READ_LEFT processing_sm.LOOP_WAIT_READ_LEFT2 processing_sm.LOOP_WAIT_READ_LEFT1 processing_sm.LOOP_START_SM processing_sm.READ_RIGHT_FIRST_ROW_SM processing_sm.IDLE2_FIRST_ROW_SM processing_sm.IDLE1_FIRST_ROW_SM processing_sm.READ_LEFT_FIRST_ROW_SM processing_sm.IDLE_SM 
 processing_sm.IDLE_SM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 processing_sm.READ_LEFT_FIRST_ROW_SM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
@@ -19,7 +19,7 @@ processing_sm.LOOP_WRITE_RIGHT 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1
 processing_sm.LOOP_WRITE_ADD_ADVANCE2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 processing_sm.END_SM 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |control_unit|processing_unit:u_processing_unitG|processing_sm
+State Machine - |control_unit|color_control_unit:u_color_control_unit_g|processing_unit:u_processing_unit|processing_sm
 Name processing_sm.END_SM processing_sm.LOOP_WRITE_ADD_ADVANCE2 processing_sm.LOOP_WRITE_RIGHT processing_sm.LOOP_WRITE_ADD_ADVANCE1 processing_sm.LOOP_WRITE_LEFT processing_sm.LOOP_READ_RIGHT processing_sm.LOOP_WAIT_READ_RIGHT2 processing_sm.LOOP_WAIT_READ_RIGHT1 processing_sm.LOOP_READ_LEFT processing_sm.LOOP_WAIT_READ_LEFT2 processing_sm.LOOP_WAIT_READ_LEFT1 processing_sm.LOOP_START_SM processing_sm.READ_RIGHT_FIRST_ROW_SM processing_sm.IDLE2_FIRST_ROW_SM processing_sm.IDLE1_FIRST_ROW_SM processing_sm.READ_LEFT_FIRST_ROW_SM processing_sm.IDLE_SM 
 processing_sm.IDLE_SM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 processing_sm.READ_LEFT_FIRST_ROW_SM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
@@ -39,7 +39,7 @@ processing_sm.LOOP_WRITE_RIGHT 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1
 processing_sm.LOOP_WRITE_ADD_ADVANCE2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 processing_sm.END_SM 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |control_unit|processing_unit:u_processing_unitR|processing_sm
+State Machine - |control_unit|color_control_unit:u_color_control_unit_r|processing_unit:u_processing_unit|processing_sm
 Name processing_sm.END_SM processing_sm.LOOP_WRITE_ADD_ADVANCE2 processing_sm.LOOP_WRITE_RIGHT processing_sm.LOOP_WRITE_ADD_ADVANCE1 processing_sm.LOOP_WRITE_LEFT processing_sm.LOOP_READ_RIGHT processing_sm.LOOP_WAIT_READ_RIGHT2 processing_sm.LOOP_WAIT_READ_RIGHT1 processing_sm.LOOP_READ_LEFT processing_sm.LOOP_WAIT_READ_LEFT2 processing_sm.LOOP_WAIT_READ_LEFT1 processing_sm.LOOP_START_SM processing_sm.READ_RIGHT_FIRST_ROW_SM processing_sm.IDLE2_FIRST_ROW_SM processing_sm.IDLE1_FIRST_ROW_SM processing_sm.READ_LEFT_FIRST_ROW_SM processing_sm.IDLE_SM 
 processing_sm.IDLE_SM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 processing_sm.READ_LEFT_FIRST_ROW_SM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 

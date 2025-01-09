@@ -1,5 +1,5 @@
 Assembler report for Projecton2
-Sat Dec 28 23:41:54 2024
+Thu Jan 09 14:01:41 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Dec 28 23:41:54 2024 ;
+; Assembler Status      ; Successful - Thu Jan 09 14:01:41 2025 ;
 ; Revision Name         ; Projecton2                            ;
 ; Top-level Entity Name ; control_unit                          ;
 ; Family                ; Cyclone IV E                          ;
@@ -78,8 +78,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+--------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                            ;
 +----------------+--------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0514A94A                                                                                                         ;
-; Checksum       ; 0x0514A94A                                                                                                         ;
+; JTAG usercode  ; 0x05174751                                                                                                         ;
+; Checksum       ; 0x05174751                                                                                                         ;
 +----------------+--------------------------------------------------------------------------------------------------------------------+
 
 
@@ -89,13 +89,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Dec 28 23:41:47 2024
+    Info: Processing started: Thu Jan 09 14:01:33 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Projecton2 -c Projecton2
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 5019 megabytes
-    Info: Processing ended: Sat Dec 28 23:41:55 2024
+    Info: Processing ended: Thu Jan 09 14:01:41 2025
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
 

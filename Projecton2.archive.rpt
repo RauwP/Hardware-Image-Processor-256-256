@@ -1,5 +1,5 @@
 Archive Project report for Projecton2
-Sat Dec 28 23:44:47 2024
+Thu Jan 02 13:21:29 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Sat Dec 28 23:44:47 2024 ;
+; Archive Project Status ; Successful - Thu Jan 02 13:21:29 2025 ;
 ; Revision Name          ; Projecton2                            ;
 ; Top-level Entity Name  ; Control_Unit                          ;
 ; Family                 ; Cyclone IV E                          ;
@@ -48,6 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------+
 Info: File Set 'Custom' contains:
     Info: Programming output files
+    Info: Incremental compilation and Rapid Recompile database files (version-incompatible)
     Info: Automatically detected source files
     Info: Project source and settings files
     Info: Version-compatible database files
@@ -63,39 +64,59 @@ Info: ----------------------------------------------------------
 Info: Generated report 'Projecton2.archive.rpt'
 Info (23030): Evaluation of Tcl script g:/quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5068 megabytes
-    Info: Processing ended: Sat Dec 28 23:44:48 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 5069 megabytes
+    Info: Processing ended: Thu Jan 02 13:21:30 2025
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:13
 
 
-+--------------------------------------------------+
-; Files Archived                                   ;
-+--------------------------------------------------+
-; File Name                                        ;
-+--------------------------------------------------+
-; g:/quartus/quartus/bin64/assignment_defaults.qdf ;
-; output_files/Projecton2.jdi                      ;
-; output_files/Projecton2.sld                      ;
-; output_files/Projecton2.sof                      ;
-; Projecton2.qpf                                   ;
-; Projecton2.qsf                                   ;
-; RAM.cmp                                          ;
-; RAM.qip                                          ;
-; RAM.vhd                                          ;
-; RAM_inst.vhd                                     ;
-; ROM.cmp                                          ;
-; ROM.qip                                          ;
-; ROM.vhd                                          ;
-; ROM_init/lena_noise_b.mif                        ;
-; ROM_init/lena_noise_g.mif                        ;
-; ROM_init/lena_noise_r.mif                        ;
-; ROM_init/petruha_noise_b.mif                     ;
-; ROM_init/petruha_noise_g.mif                     ;
-; ROM_init/petruha_noise_r.mif                     ;
-; VHDL/Control_Unit.vhd                            ;
-; VHDL/helper_package.vhd                          ;
-; VHDL/Processing_Unit.vhd                         ;
-+--------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Files Archived                                                                ;
++-------------------------------------------------------------------------------+
+; File Name                                                                     ;
++-------------------------------------------------------------------------------+
+; db/Projecton2.db_info                                                         ;
+; g:/quartus/quartus/bin64/assignment_defaults.qdf                              ;
+; incremental_db/compiled_partitions/Projecton2.db_info                         ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.cmp.cdb          ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.cmp.dfp          ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.cmp.hdb          ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.cmp.logdb        ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.cmp.rcfdb        ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.map.cdb          ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.map.dpi          ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.map.hbdb.cdb     ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.map.hbdb.hb_info ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.map.hbdb.hdb     ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.map.hbdb.sig     ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.map.hdb          ;
+; incremental_db/compiled_partitions/Projecton2.root_partition.map.kpt          ;
+; incremental_db/compiled_partitions/Projecton2.rrp.hdb                         ;
+; output_files/Projecton2.jdi                                                   ;
+; output_files/Projecton2.sld                                                   ;
+; output_files/Projecton2.sof                                                   ;
+; Projecton2.qpf                                                                ;
+; Projecton2.qsf                                                                ;
+; Python Scripts/hextomif.py                                                    ;
+; Python Scripts/mif_to_raw.py                                                  ;
+; Python Scripts/noiseadder.py                                                  ;
+; Python Scripts/raw_to_mif.py                                                  ;
+; RAM.cmp                                                                       ;
+; RAM.qip                                                                       ;
+; RAM.vhd                                                                       ;
+; RAM_inst.vhd                                                                  ;
+; ROM.cmp                                                                       ;
+; ROM.qip                                                                       ;
+; ROM.vhd                                                                       ;
+; ROM_init/lena_noise_b.mif                                                     ;
+; ROM_init/lena_noise_g.mif                                                     ;
+; ROM_init/lena_noise_r.mif                                                     ;
+; ROM_init/petruha_noise_b.mif                                                  ;
+; ROM_init/petruha_noise_g.mif                                                  ;
+; ROM_init/petruha_noise_r.mif                                                  ;
+; VHDL/Control_Unit.vhd                                                         ;
+; VHDL/helper_package.vhd                                                       ;
+; VHDL/Processing_Unit.vhd                                                      ;
++-------------------------------------------------------------------------------+
 
 
